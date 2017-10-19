@@ -117,6 +117,7 @@ header{
     radial-gradient(circle, white 10%, transparent 10%), linear-gradient(to right, var(--col1), var(--col1));
 
     background-size:100% 100%, 24px 24px, 24px 24px, 100% 100%;
+    background-blend-mode: normal, normal, normal, multiply;
     transition: all .51s ease-in-out;
     animation: NavH 1s linear infinite;
     opacity: 0;
@@ -127,7 +128,7 @@ header{
      border-radius: 10px 10px 10px;
     transition: all .51s ease-in-out;
  
-    opacity: 0.5;
+    opacity: 1;
 }
 .menu-h>ul>li
 {
