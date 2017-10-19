@@ -1,0 +1,253 @@
+/***************************************************
+Add your Google Fonts
+Update ALL the named colours to create a monochromatic scheme
+Style the menus - one horizontally and one vertically
+Add the hover/active effects to your menu items
+***************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Vollkorn');
+
+:root
+{
+    --col1:#a275e2;
+    --col2:#2b2435;
+    --col3:#413752;
+    --col4:#521BA0;
+    --col5:#342c44;
+    --col6:#1B1326;
+    --col7:#2b2435;
+    --col3T:rgba(65,55,82,0.5);
+    --col7T:rgba(65,55,82,0.0);
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    /* ADD the Google sans-serif font to this font stack */
+    font-family: 'Open Sans Condensed', helvetica, arial, sans-serif;
+}
+html, body
+{
+
+    
+    background-image: linear-gradient(to bottom,  var(--col3), var(--col3) 12%, #3b304a 12%, #3b304a 24%, #342c44 24%, #342c44 40%, var(--col6) 40%),
+    
+    linear-gradient(to bottom, white, rgba(255,255,255, 0) 40% ,white),
+
+    linear-gradient(45deg, var(--col3T) 25%, transparent 25%, transparent 75%, var(--col3T) 75%), 
+
+    linear-gradient(45deg, var(--col3T) 25%, transparent 25%, transparent 75%, var(--col3T) 75%);
+
+    background-size: cover, cover, 20px 20px, 20px 20px;
+    background-position: 0 0, 0 0, 10px 10px, 0 0;
+
+    background-blend-mode: multiply, normal, normal, normal;
+    
+}
+h1{
+    font-size: 3rem;
+    /* ADD the Google serif font to this font stack */
+    font-family: Vollkorn, 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    padding: 1rem 2rem;
+    display: inline;
+}
+h2{
+    font-size: 4.23rem;
+    /* ADD the Google serif font to this font stack */
+    font-family: Vollkorn, 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    padding: 1rem 2rem;
+}
+nav li{
+    font-size: 2.3rem;
+}
+p{
+    font-size: 1.618rem;
+    padding: 1rem 2rem;
+}
+.wrapper{
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--col7);
+    color: white;
+    box-shadow: 0px 0px 1.3rem var(--col2);
+}
+header{
+    background-color: var(--col3);
+    color: white;
+}
+.menu-h
+{
+    height: 7rem;
+}
+.menu-h ul
+{
+    width: 100%;
+    height: 80%;
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to bottom, var(--col6) 2%, var(--col6) 75%, transparent);
+    position: relative;
+    transition: all .51s ease-in-out;
+
+}
+
+.menu-h>ul>li:before
+{
+    box-shadow: 0;
+    border-radius: inherit;
+    content: '\00a0';
+    display: block;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(162, 117, 226, 1) 30%, rgba(162, 117, 226, 0.5) 100% ), radial-gradient(circle, white 10%, transparent 10%),
+    radial-gradient(circle, white 10%, transparent 10%), linear-gradient(to right, var(--col1), var(--col1));
+
+    background-size:100% 100%, 24px 24px, 24px 24px, 100% 100%;
+    transition: all .51s ease-in-out;
+    animation: NavH 1s linear infinite;
+    opacity: 0;
+    
+}
+.menu-h>ul>li:hover:before
+{
+     border-radius: 10px 10px 10px;
+    transition: all .51s ease-in-out;
+ 
+    opacity: 0.5;
+}
+.menu-h>ul>li
+{
+    /* style the list items to remove the bullets
+    and line up horizontally
+    and take up 20% of the width of the ul */
+    width: 15%;
+    list-style: none;
+    display: block;
+    position: relative;
+    
+    height: 70%;
+    border-radius: 15px 50px 30px;
+    background: var(--col6);
+    box-shadow: 0 0 0.3rem white;
+
+    margin: 0.4rem 0.6rem;
+    overflow: auto;
+    top: 0%;
+   transition: all .51s ease-in-out;
+    z-index: 1;
+    
+  
+    
+}
+
+.menu-h>ul>li:hover 
+{
+    flex-grow: 0.3;
+
+    clear: both;
+    background: transparent;
+    border-radius: 10px 10px 10px;
+    top: 15%;
+   
+    height: 100%;
+    transition: all .51s ease-in-out;
+
+    
+}
+.menu-h>ul>li a,
+.menu-h>ul>li a:link,
+.menu-h>ul>li a:visited
+{
+    /* style the anchors to fill the entire width of the li
+    make sure there is padding around your text */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #4f00ed;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s ease-in-out;
+    
+    
+}
+
+.menu-h>ul>li:hover a
+{
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 0.25rem 0.2rem 0.3rem #7935d8;
+    transition: all .51s ease-in-out;
+}
+
+.menu-v
+{
+    width: 15%;
+    float:left;
+    
+}
+.menu-v li
+{
+    /* style the list items to remove the bullets
+    and line up vertically
+    and take up 100% of the width of the ul */
+    
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+   
+    
+    
+}
+.menu-v a,
+.menu-v a:link,
+.menu-v a:visited
+{
+    /* style the anchors to fill the entire width of the li */
+    text-align: left;
+    text-decoration: none;
+    background-color: white;
+    display: block;
+   
+    
+    
+}
+.menu-v a:hover,
+.menu-v a:active
+{
+
+}
+
+main
+{
+    width:80%;
+    float: right;
+}
+
+footer
+{
+    clear:both;
+}
+@keyframes NavH {
+    0%{background-position: 0 0, 0px 0px, 12px 12px, 0 0;}
+    50%{background-position: 0 0, 12px 12px, 23px 23px, 0 0;}
+    51%{background-position: 0 0, 12px 12px, 0px 0px, 0 0;}
+    100%{background-position: 0 0, 23px 23px, 12px 12px, 0 0}
+}
