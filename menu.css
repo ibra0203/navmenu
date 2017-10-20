@@ -254,6 +254,7 @@ header{
     display: block;
     transition: all .51s ease-in-out;
     letter-spacing: normal;
+    color: var(--col4);
     
 }
 .menu-v li:hover,
@@ -269,12 +270,6 @@ header{
     letter-spacing: 0.3rem;
     transition: all .51s ease-in-out;
     
-}
-.menu-v>ul:hover li:not(:hover)
-{
-  
-
-    transition: all .51s ease-in-out;
 }
 
 .menu-v>ul:hover li:not(:hover) a
